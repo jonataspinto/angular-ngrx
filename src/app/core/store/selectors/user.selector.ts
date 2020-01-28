@@ -7,5 +7,5 @@ export const selectUserState = (state: AppState) => state.users;
 
 export const userLoading = createSelector(
   selectUserState,
-  (state: fromUser.UserState) => state.users
+  (state: fromUser.UserState) => state.data
 );

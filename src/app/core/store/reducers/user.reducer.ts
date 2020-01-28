@@ -1,24 +1,23 @@
 import { Action } from '@ngrx/store';
 
 import { AppActions } from '../actions';
-
 export interface UserState {
-  users: [];
+  data: [];
 }
 
 export const initialState: UserState = {
-  users: [],
+  data: [],
 };
 
 export function reducer(state = initialState, action: Action): UserState {
   switch (action.type) {
     case AppActions.UsersActionTypes.LOAD_USERS:
 
-      const payload = action['users'];
+      const payload = action['payload'];
 
       return {
         ...state,
-        users: payload
+        data: payload
       };
     default:
       return state;

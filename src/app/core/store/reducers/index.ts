@@ -1,4 +1,5 @@
-import { ActionReducerMap } from '@ngrx/store';
+import { ActionReducerMap,
+  MetaReducer } from '@ngrx/store';
 
 import * as fromUser from './user.reducer';
 
@@ -9,3 +10,5 @@ export interface AppState {
 export const reducers: ActionReducerMap<AppState> = {
   users: fromUser.reducer,
 };
+
+export const metaReducers: MetaReducer<AppState>[] = [];
